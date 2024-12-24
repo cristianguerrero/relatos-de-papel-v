@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useCart } from '../context/CartContext';
 
 const Home = () => {
   const [search, setSearch] = useState('');
+  const { addToCart } = useCart();
+
   const books = [
     { id: 1, title: 'El Quijote' },
     { id: 2, title: 'Cien años de soledad' },
@@ -29,6 +32,7 @@ const Home = () => {
           {filteredBooks.map((book) => (
             <li key={book.id}>
               {book.title} - <a href={`/book/${book.id}`}>Ver detalles</a>
+              <button onClick={() => addToCart(book)}>Añadir al carrito</button>
             </li>
           ))}
         </ul>

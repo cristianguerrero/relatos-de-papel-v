@@ -1,8 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 
 const Book = () => {
   const { id } = useParams();
+  const { addToCart } = useCart();
+
   const books = [
     { id: 1, title: 'El Quijote', author: 'Miguel de Cervantes' },
     { id: 2, title: 'Cien años de soledad', author: 'Gabriel García Márquez' },
@@ -19,7 +22,7 @@ const Book = () => {
     <div>
       <h1>{book.title}</h1>
       <p>Autor: {book.author}</p>
-      <button>Añadir al carrito</button>
+      <button onClick={() => addToCart(book)}>Añadir al carrito</button>
     </div>
   );
 };

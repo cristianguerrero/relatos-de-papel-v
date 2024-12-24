@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import Landing from './pages/Landing';
 import Home from './pages/Home';
 import Book from './pages/Book';
 import Checkout from './pages/Checkout';
+import Cart from './components/Cart';
 
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
@@ -14,7 +15,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    // <>
+    // 
     //   <div>
     //     <a href="https://vite.dev" target="_blank">
     //       <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -35,13 +36,16 @@ function App() {
     //   <p className="read-the-docs">
     //     Click on the Vite and React logos to learn more
     //   </p>
-    // </>
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/book/:id" element={<Book />} />
-      <Route path="/checkout" element={<Checkout />} />
-    </Routes>
+    // 
+    <>
+      <Cart />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/book/:id" element={<Book />} />
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+    </>
   )
 }
 
