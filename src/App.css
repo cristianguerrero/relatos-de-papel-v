@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+/*  */
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* background: #fdf1e1; */
+  background: #d3a890;
+  /* background: #A37B64; */
+  color: #011423;
+}
