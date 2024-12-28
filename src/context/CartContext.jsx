@@ -14,8 +14,24 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (book) => {
-    setCart((prevCart) => [...prevCart, book]);
+  // Agregar un libro al carrito con cantidades
+  const addToCart = (book, quantity = 1) => {
+    setCart((prevCart) => {
+      const existingBookIndex = prevCart.findIndex((item) => item.id === book.id);
+
+      if (existingBookIndex >= 0) {
+        // Si el libro ya está en el carrito, actualizamos la cantidad
+        const updatedCart = prevCart.map((item, index) =>
+          index === existingBookIndex
+            ? { ...item, quantity: item.quantity + quantity } // Incrementamos la cantidad
+            : item
+        );
+        return updatedCart;
+      } else {
+        // Si no está, lo agregamos con la cantidad seleccionada
+        return [...prevCart, { ...book, quantity }];
+      }
+    });
   };
 
   const removeFromCart = (bookId) => {

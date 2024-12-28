@@ -1,0 +1,95 @@
+.book-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fdf1e1;
+  color: #011423;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.book-image img {
+  max-width: 300px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.book-details {
+  flex: 1;
+}
+
+.book-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.book-author,
+.book-description,
+.book-price {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.book-quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.book-quantity input {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.book-add-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book-add-button:hover {
+  background-color: #0056b3;
+}
+
+.book-reviews {
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+.book-reviews h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.book-reviews ul {
+  list-style: none;
+  padding: 0;
+}
+
+.book-reviews li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: #444;
+}

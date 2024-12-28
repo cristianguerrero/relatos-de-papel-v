@@ -52,3 +52,19 @@ body {
   /* background: #A37B64; */
   color: #011423;
 }
+
+.button-blue {
+  padding: 10px 15px;
+  background: #011423;
+  color: #fdf1e1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+  margin: 0px 5px;
+}
+
+.button-blue:hover {
+  background: #02294e;
+}

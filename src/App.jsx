@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import Landing from './pages/Landing';
 import Home from './pages/home/Home';
-import Book from './pages/Book';
-import Checkout from './pages/Checkout';
+import Book from './pages/book/Book';
+import Checkout from './pages/checkout/Checkout';
 import Cart from './components/Cart';
 
 // import reactLogo from './assets/react.svg'
@@ -12,7 +14,11 @@ import Cart from './components/Cart';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0);
+  const location = useLocation();
+
+  // Definir las rutas en las que se mostrará el carrito
+  const showCartOnPaths = ['/home', '/book'];
 
   return (
     // 
@@ -38,13 +44,18 @@ function App() {
     //   </p>
     // 
     <>
-      <Cart />
+      <Header />
+      {showCartOnPaths.some((path) => location.pathname.startsWith(path)) && <Cart />}
+
+      {/* <Cart /> */}
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/book/:id" element={<Book />} />
+        <Route path="/home" element={<><Cart /><Home /></>} />
+        <Route path="/book/:id" element={<><Cart /><Book /></>} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
+
+      <Footer />
     </>
   )
 }
