@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import { useCart } from '../../context/CartContext';
 import './BookCarousel.css';
+import { useNavigate  } from 'react-router-dom';
 
 const BookCarousel = ({ books, itemsPerPage = 3, currentPage, setCurrentPage }) => {
   const { addToCart } = useCart();
   const [quantities, setQuantities] = useState({});
+  const navigate = useNavigate();
+
+  const handleNavigate = (bookId) => {
+    navigate(`/book/${bookId}`); // Usa navigate para redirigir
+  };
 
   // Divide los libros en páginas
   const totalPages = Math.ceil(books.length / itemsPerPage);
@@ -62,9 +68,12 @@ const BookCarousel = ({ books, itemsPerPage = 3, currentPage, setCurrentPage }) 
             </div>
             <div className="button-container">
               <div className="mrg-btm">
-                <a href={`/book/${book.id}`} className="button_detalle">
+                <button
+                  onClick={() => handleNavigate(book.id)} // Llama a la función de navegación
+                  className="button-blue"
+                >
                   Ver detalles
-                </a>
+                </button>
               </div>
               <div>
                 <button
