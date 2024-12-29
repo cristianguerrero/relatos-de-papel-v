@@ -7,7 +7,7 @@ import Landing from './pages/Landing';
 import Home from './pages/home/Home';
 import Book from './pages/book/Book';
 import Checkout from './pages/checkout/Checkout';
-import Cart from './components/Cart';
+import Cart from './components/cart/Cart';
 
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'

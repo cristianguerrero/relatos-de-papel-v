@@ -1,5 +1,6 @@
 #root {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -47,24 +48,13 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: #b3927f;
+  /* background: #d3a890; */
   /* background: #fdf1e1; */
-  background: #d3a890;
   /* background: #A37B64; */
   color: #011423;
 }
 
-.button-blue {
-  padding: 10px 15px;
-  background: #011423;
-  color: #fdf1e1;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s;
-  margin: 0px 5px;
-}
-
-.button-blue:hover {
-  background: #02294e;
+.mrg-btm {
+  margin-bottom: 20px;
 }

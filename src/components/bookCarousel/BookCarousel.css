@@ -1,0 +1,88 @@
+.book-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-books {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+}
+
+.book-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button-blue {
+  background: #011423;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+.button-blue:hover {
+  background: #02294e;
+}
+
+.button-blue:focus {
+  outline: none; /* Elimina el contorno predeterminado */
+  box-shadow: 0 0 4px #0056b3; /* Agrega un sombreado de enfoque */
+}
+
+a.button-blue {
+  display: inline-block; /* Asegura que el botón de enlace tenga el mismo comportamiento */
+}
+
+.book-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.carousel-controls button {
+  background: #011423;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carousel-controls button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.carousel-controls span {
+  font-size: 14px;
+  color: #555;
+}
