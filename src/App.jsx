@@ -7,6 +7,7 @@ import Landing from './pages/Landing';
 import Home from './pages/home/Home';
 import Book from './pages/book/Book';
 import Checkout from './pages/checkout/Checkout';
+import NotFound from './pages/notFound/NotFound';
 import Cart from './components/cart/Cart';
 
 // import reactLogo from './assets/react.svg'
@@ -50,9 +51,10 @@ function App() {
       {/* <Cart /> */}
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/home" element={<><Cart /><Home /></>} />
-        <Route path="/book/:id" element={<><Cart /><Book /></>} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/book/:id" element={<Book />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />

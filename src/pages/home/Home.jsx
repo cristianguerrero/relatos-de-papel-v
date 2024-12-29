@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
-import { useCart } from '../../context/CartContext';
 import SearchBar from '../../components/searchBar/SearchBar';
 import BookCarousel from '../../components/bookCarousel/BookCarousel';
-import './Home.css'; // Importamos los estilos
 import { useBooks } from '../../hooks/useBooks';
-
-// const books = [
-//   { id: 1, title: 'El Quijote', author: 'Miguel de Cervantes', price: 20, image: '/src/assets/logo.png', rating: 4.5 },
-//   { id: 2, title: 'Cien años de soledad', author: 'Gabriel García Márquez', price: 25, image: '/src/assets/logo.png', rating: 4.7 },
-//   { id: 3, title: 'Don Juan Tenorio', author: 'José Zorrilla', price: 15, image: '/src/assets/logo.png', rating: 4.2 },
-// ];
+import './Home.css';
 
 const Home = () => {
   const [search, setSearch] = useState(''); // Estado para el filtro
   const [currentPage, setCurrentPage] = useState(0); // Estado para la página actual
-  const { books, filterBooks } = useBooks();
+  const { filterBooks } = useBooks();
   
   // const [quantities, setQuantities] = useState(
   //   books.reduce((acc, book) => ({ ...acc, [book.id]: 1 }), {}) // Inicializamos cantidades

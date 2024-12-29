@@ -62,14 +62,14 @@
   padding: 10px 15px;
   font-size: 16px;
   color: #fff;
-  background-color: #007bff;
+  background-color: #011423;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .book-add-button:hover {
-  background-color: #0056b3;
+  background-color: #063355;
 }
 
 .book-reviews {

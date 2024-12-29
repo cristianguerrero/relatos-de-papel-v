@@ -1,15 +1,46 @@
-.cart-container {
+/* Botón de alternar carrito */
+.cart-toggle-button {
   position: fixed;
   top: 10%;
   right: 20px;
-  width: 300px;
-  background-color: #f5e6da;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Para asegurarse de que esté encima de otros elementos */
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1100; /* Para estar por encima del contenido */
 }
 
+.cart-toggle-button:hover {
+  background-color: #333;
+}
+
+/* Contenedor del carrito */
+.cart-container {
+  position: fixed;
+  top: 10%;
+  right: -320px; /* Carrito oculto fuera de la vista */
+  width: 300px;
+  height: calc(100% - 20%);
+  background-color: #f5e6da;
+  padding: 15px;
+  border-radius: 8px 0 0 8px;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: right 0.3s ease; /* Animación suave */
+}
+
+.cart-container.open {
+  right: 0; /* Muestra el carrito cuando está abierto */
+}
+
+.cart-container.closed {
+  right: -320px; /* Oculta el carrito cuando está cerrado */
+}
+
+/* Otros estilos */
 .cart-title {
   font-size: 18px;
   font-weight: bold;
@@ -18,6 +49,7 @@
 
 .cart-empty {
   color: #666;
+  text-align: center;
 }
 
 .cart-list {

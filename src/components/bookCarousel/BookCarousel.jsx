@@ -46,6 +46,10 @@ const BookCarousel = ({ books, itemsPerPage = 3, currentPage, setCurrentPage }) 
             <img src={book.image} alt={book.title} className="book-image" />
             <h3 className="book-title">{book.title}</h3>
             <p>Autor: {book.author}</p>
+            <div className="book-rating">
+                {'★'.repeat(Math.floor(book.rating))}
+                {'☆'.repeat(5 - Math.floor(book.rating))}
+              </div>
             <p>Precio: ${book.price}</p>
             <div className="book-quantity">
               <label htmlFor={`quantity-${book.id}`}>Cantidad:</label>
@@ -59,7 +63,7 @@ const BookCarousel = ({ books, itemsPerPage = 3, currentPage, setCurrentPage }) 
             </div>
             <div className="button-container">
               <div className="mrg-btm">
-                <a href={`/book/${book.id}`} className="button-blue">
+                <a href={`/book/${book.id}`} className="button_detalle">
                   Ver detalles
                 </a>
               </div>

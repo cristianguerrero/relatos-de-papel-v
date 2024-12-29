@@ -70,6 +70,18 @@
   margin-bottom: 20px;
 }
 
+.button_detalle {
+  background: #011423;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
+
 /* Responsividad */
 @media (min-width: 768px) {
   .book-list {
