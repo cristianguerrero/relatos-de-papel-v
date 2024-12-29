@@ -42,9 +42,7 @@
   color: #888;
 }
 
-/*  */
-
-/* Estilos generales */
+/* Estilo general body */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -53,8 +51,4 @@ body {
   /* background: #fdf1e1; */
   /* background: #A37B64; */
   color: #011423;
-}
-
-.mrg-btm {
-  margin-bottom: 20px;
 }

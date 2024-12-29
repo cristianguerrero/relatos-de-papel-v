@@ -35,12 +35,6 @@ const Checkout = () => {
     clearCart();
     navigate('/home');
   };
-  
-  // const handleConfirmPurchase = () => {
-  //   alert('¡Compra realizada con éxito!');
-  //   clearCart();
-  //   navigate('/');
-  // };
 
   return (
     <div className="checkout-container">

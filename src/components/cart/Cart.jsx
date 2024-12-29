@@ -6,7 +6,7 @@ import './Cart.css';
 const Cart = () => {
   const { cart, removeFromCart } = useCart();
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false); // Estado para mostrar/ocultar el carrito
+  const [isOpen, setIsOpen] = useState(false);
 
   // Agrupar productos por ID y sumar cantidades
   const groupedCart = cart.reduce((acc, item) => {
@@ -14,7 +14,7 @@ const Cart = () => {
     if (existingItem) {
       existingItem.quantity += item.quantity; // Sumar cantidad real
     } else {
-      acc.push({ ...item }); // Añadir nuevo producto al agrupado
+      acc.push({ ...item });
     }
     return acc;
   }, []);

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './NotFound.css'; // Archivo de estilos
+import './NotFound.css';
 
 const NotFound = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
-    navigate('/'); // Redirige a la página principal
+    navigate('/');
   };
 
   return (

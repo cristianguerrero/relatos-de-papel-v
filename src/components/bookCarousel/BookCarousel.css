@@ -46,12 +46,12 @@
 }
 
 .button-blue:focus {
-  outline: none; /* Elimina el contorno predeterminado */
-  box-shadow: 0 0 4px #0056b3; /* Agrega un sombreado de enfoque */
+  outline: none;
+  box-shadow: 0 0 4px #0056b3;
 }
 
 a.button-blue {
-  display: inline-block; /* Asegura que el botón de enlace tenga el mismo comportamiento */
+  display: inline-block;
 }
 
 .book-image {

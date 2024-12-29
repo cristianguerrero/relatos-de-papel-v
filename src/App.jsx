@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Header from './components/header/Header';
@@ -15,7 +14,6 @@ import Cart from './components/cart/Cart';
 import './App.css'
 
 function App() {
-  // const [count, setCount] = useState(0);
   const location = useLocation();
 
   // Definir las rutas en las que se mostrará el carrito
@@ -48,7 +46,6 @@ function App() {
       <Header />
       {showCartOnPaths.some((path) => location.pathname.startsWith(path)) && <Cart />}
 
-      {/* <Cart /> */}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />

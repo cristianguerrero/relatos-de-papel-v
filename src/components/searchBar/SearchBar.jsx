@@ -7,8 +7,8 @@ const SearchBar = ({ search, setSearch }) => {
       <input
         type="text"
         placeholder="Buscar libros por título..."
-        value={search} // Estado controlado desde el componente padre (Home)
-        onChange={(e) => setSearch(e.target.value)} // Actualiza el estado
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
         className="search-input"
       />
     </div>

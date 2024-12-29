@@ -22,19 +22,9 @@ const Book = () => {
     return <p>Libro no encontrado</p>;
   }
 
-  // const handleAddToCart = () => {
-  //   for (let i = 0; i < quantity; i++) {
-  //     addToCart(book);
-  //   }
-  // };
-
-  // const handleAddToCart = () => {
-  //   addToCart({ ...book, quantity });
-  // };
-
   const handleAddToCart = () => {
     if (quantity > 0) {
-      addToCart(book, quantity); // Aquí enviamos la cantidad seleccionada
+      addToCart(book, quantity);
     } else {
       alert('Por favor, selecciona una cantidad válida.');
     }

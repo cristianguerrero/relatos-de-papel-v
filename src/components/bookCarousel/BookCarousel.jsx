@@ -3,9 +3,8 @@ import { useCart } from '../../context/CartContext';
 import './BookCarousel.css';
 
 const BookCarousel = ({ books, itemsPerPage = 3, currentPage, setCurrentPage }) => {
-  // const [currentPage, setCurrentPage] = useState(0);
   const { addToCart } = useCart();
-  const [quantities, setQuantities] = useState({}); // Estado para manejar cantidades por libro
+  const [quantities, setQuantities] = useState({});
 
   // Divide los libros en páginas
   const totalPages = Math.ceil(books.length / itemsPerPage);
@@ -57,7 +56,7 @@ const BookCarousel = ({ books, itemsPerPage = 3, currentPage, setCurrentPage }) 
                 type="number"
                 id={`quantity-${book.id}`}
                 min="1"
-                value={quantities[book.id] || 1} // Mostrar la cantidad específica o 1 por defecto
+                value={quantities[book.id] || 1}
                 onChange={(e) => handleQuantityChange(book.id, e.target.value)}
               />
             </div>
